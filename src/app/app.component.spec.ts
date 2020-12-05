@@ -45,7 +45,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('vscode');
   });
 
-  it('should open file explorer when menuChange() is being called with an argument Explorer  ', () => {
+  it('should open file explorer, when menuChange() is being called with an argument Explorer  ', () => {
     const spyOpen = spyOn(app.menuSidenav, 'open').and.callFake( () => {
       return new Promise<MatDrawerToggleResult>((res, rej) => res('open'));
     });
@@ -56,7 +56,7 @@ describe('AppComponent', () => {
   });
 
 
-  it('should open search explorer when menuChange() is called with an argumen Search ', () => {
+  it('should open search, when menuChange() is called with an argument Search ', () => {
     const spyOpen = spyOn(app.menuSidenav, 'open').and.callFake( () => {
       return new Promise<MatDrawerToggleResult>((res, rej) => res('open'));
     });
@@ -66,7 +66,7 @@ describe('AppComponent', () => {
     expect(spyOpen).toHaveBeenCalled();
   });
 
-  it('should open Extensions panel when menuChange() is called with an argument extensions  ', () => {
+  it('should open Extensions, when menuChange() is called with an argument Extensions  ', () => {
     const spyOpen = spyOn(app.menuSidenav, 'open').and.callFake( () => {
       return new Promise<MatDrawerToggleResult>((res, rej) => res('open'));
     });
@@ -77,7 +77,7 @@ describe('AppComponent', () => {
 
   });
 
-  it('should close the panel when menuChange is called with undefined', () => {
+  it('should close the panel when menuChange() is called with undefined', () => {
 
      const spyClose = spyOn(app.menuSidenav, 'close').and.callFake( () => {
        return new Promise<MatDrawerToggleResult>((res, rej) => res('close'));
