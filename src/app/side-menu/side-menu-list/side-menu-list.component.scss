@@ -1,0 +1,14 @@
+.panel-icons {
+  background-color: rgb(51 49 49);
+  height: 100vh;
+  .icon-container {
+    padding: 30px 20px 0px 20px;
+    .icons {
+      color: white;
+      cursor: pointer;
+      svg {
+        fill: white;
+      }
+    }
+  }
+}

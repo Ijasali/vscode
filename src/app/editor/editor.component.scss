@@ -1,0 +1,39 @@
+.editor-container {
+  background-color: rgb(32, 32, 32);
+  height: 100vh;
+}
+
+.tab-group {
+  background-color: rgb(48, 48, 48);
+  color: white;
+  .mat-tab-label {
+    color: white;
+    color: white;
+    height: 30px;
+
+    border-right: 2px solid black;
+    font-size: 12px;
+  }
+  .mat-tab-label-active {
+    background-color: black;
+    border-bottom: 0px;
+  }
+  .mat-tab-body-content {
+    height: 100vh;
+    background-color: black;
+  }
+  .mat-ink-bar {
+    background-color: black !important;
+  }
+  .close-container {
+    margin-left: 10px;
+  }
+}
+.editor {
+  height: 90vh;
+  width: 100vh;
+  background-color: black;
+  border: none;
+  color: white;
+  outline: none !important;
+}

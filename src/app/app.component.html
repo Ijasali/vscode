@@ -1,1 +1,25 @@
-<h1>Hello world</h1>
+<div fxLayou="column">
+    <div fxFlex="5%" >
+        <side-menu-list (menuChange)="menuChange($event)"></side-menu-list>
+    </div>
+    <div fxFlex="10%">
+        <mat-sidenav-container class="side-nav-container" >
+            <mat-sidenav #sidenav mode="side" class="detail-panel-container" >
+                <side-menu-detail-panel-container [template]="presentlyOpenedMenu" > </side-menu-detail-panel-container>
+            </mat-sidenav>
+            <mat-sidenav-content>
+                <app-editor></app-editor>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</div>
+
+<ng-template #fileexplorer>
+    <app-file-explorer ></app-file-explorer>
+</ng-template>
+<ng-template #extensions>
+    <app-extensions ></app-extensions>
+</ng-template>
+<ng-template #search>
+    <app-search ></app-search>
+</ng-template>
