@@ -4,7 +4,7 @@
     	  <mat-tab>
 	    	  <ng-template mat-tab-label>
 				      <div >{{tab.name}}</div>
-			        <button class="close-container" (click)="closeTab(index)"><mat-icon [inline]="true" >close</mat-icon></button>
+			        <div class="close-container" (click)="closeTab(index)"><mat-icon [inline]="true" >close</mat-icon></div>
           </ng-template> 
           <textarea class='editor'>{{tab.content}}</textarea>
         </mat-tab>
