@@ -1,14 +1,13 @@
   <div class="editor-container">
-  <mat-tab-group animationDuration="0ms"  class="tab-group" [(selectedIndex)]="selectedTab">
-	<ng-container *ngFor="let tab of tabs; let index = index">
-    	<mat-tab>
-	    	<ng-template mat-tab-label>
-				<div >{{tab.name}}</div>
-			    <div class="close-container" (click)="closeTab(index)"><mat-icon [inline]="true" >close</mat-icon></div>
-            </ng-template>
-            
+    <mat-tab-group animationDuration="0ms"  class="tab-group" [(selectedIndex)]="selectedTab">
+	    <ng-container *ngFor="let tab of tabs; let index = index">
+    	  <mat-tab>
+	    	  <ng-template mat-tab-label>
+				      <div >{{tab.name}}</div>
+			        <button class="close-container" (click)="closeTab(index)"><mat-icon [inline]="true" >close</mat-icon></button>
+          </ng-template> 
           <textarea class='editor'>{{tab.content}}</textarea>
         </mat-tab>
     </ng-container>
-</mat-tab-group>
+  </mat-tab-group>
 </div>

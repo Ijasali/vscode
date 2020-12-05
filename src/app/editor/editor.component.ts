@@ -12,12 +12,13 @@ import { Store } from '../shared/store/store.service';
 })
 export class EditorComponent implements OnInit {
 
-  selectedTab = 1;
+  public selectedTab = 1;
   public tabs: FileViewModel[] = [];
-  constructor(private store: Store) { }
+  constructor(private store: Store) {}
   ngOnInit(): void {
+
+    // Whenever the user DOUBLE Clicks on a file, it will be added to the tab groups
     this.store.openFileSubject$.subscribe(f => {
-      console.log(f);
       const tabIndex = this.tabs.findIndex(x => x.id === f.id);
       if (tabIndex === -1) {
         const newTabIndex = this.tabs.push(f);
@@ -29,7 +30,6 @@ export class EditorComponent implements OnInit {
   }
 
   closeTab(index: number): void {
-    event?.stopPropagation();
     this.tabs.splice(index, 1);
   }
 

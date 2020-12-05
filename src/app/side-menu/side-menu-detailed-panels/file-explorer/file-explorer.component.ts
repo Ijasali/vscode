@@ -16,14 +16,13 @@ export class FileExplorerComponent implements OnInit {
   dataSource = new MatTreeNestedDataSource<FileExplorerViewModel>();
   constructor(private store: Store) {
     this.dataSource.data = this.store.loadFileExplorer();
-    console.log(this.dataSource.data);
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   fileClicked(file: FileViewModel): void {
     this.store.openFile(file);
   }
+
   hasChild = (_: number, node: FileExplorerViewModel) => !!node.children && node.children.length > 0;
 }

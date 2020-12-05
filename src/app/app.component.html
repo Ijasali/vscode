@@ -3,9 +3,9 @@
         <side-menu-list (menuChange)="menuChange($event)"></side-menu-list>
     </div>
     <div fxFlex="10%">
-        <mat-sidenav-container class="example-container" >
+        <mat-sidenav-container class="side-nav-container" >
             <mat-sidenav #sidenav mode="side" class="detail-panel-container" >
-                <side-menu-detail-panel [template]="presentlyOpenedMenu" > </side-menu-detail-panel>
+                <side-menu-detail-panel-container [template]="presentlyOpenedMenu" > </side-menu-detail-panel-container>
             </mat-sidenav>
             <mat-sidenav-content>
                 <app-editor></app-editor>

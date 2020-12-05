@@ -11,14 +11,21 @@ export class SideMenuListComponent implements OnInit {
 
   NavmenuEnum = NavmenuEnum;
   @Output()
-  menuChange = new EventEmitter<NavmenuEnum>();
+  menuChange = new EventEmitter<NavmenuEnum | undefined>();
+  lastItemClicked!: NavmenuEnum | undefined;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // when a menu item is clicked it emits the item. if the same icon is clicked twice, emits undefined
   itemClicked(item: NavmenuEnum): void {
-    this.menuChange.next(item);
+    if ( this.lastItemClicked !== item) {
+      this.lastItemClicked = item;
+    } else {
+      this.lastItemClicked = undefined;
+    }
+    this.menuChange.next(this.lastItemClicked);
   }
 }
